@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+ @font-face {
+    font-family: 'fontePronta';
+    src: url('pacote-projeto-d010/fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+ }
+
+body {
+    background-color: rgb(132, 225, 173);
+    margin: 0px;
+    padding: 0px; 
+       
+}
+
+
+
+
+#titulo {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 15px;
+    font-size: 1.7em;
+    color: white;
+   
+}
+
+header {
+    
+    background-image: linear-gradient(to left, #268751,  #31AE68, #1A5C38);
+    height: 200px;
+    color: white;   
+    
+}
+
+#sombra {
+    text-align: center;
+}
+
+main {
+    width: 95%;
+    max-width: 900px;
+    background-color: white;
+    text-align: center;
+    border-radius: 0px 0px 7px 7px;
+    margin: auto;
+    padding: 10px;
+    
+}
+
+.dan {
+    background-color: rgb(124, 227, 167);
+    color: black;   
+}
+
+.empresa {
+    background-color: rgb(124, 227, 167);
+    color: black;
+    padding-right: 5px;
+    
+}
+
+.empresa::before {
+    content:'🔗';
+}
+
+.dan::after{
+    content: '🔗';
+}
+
+
+a {
+    padding-left: 10px;
+    align-self: flex-end;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1,h2 {
+    font-family: 'fontePronta';
+    text-align: justify;
+    padding: 10px;
+    color: #1A5C38;
+}
+
+.fundo{
+    background-color: #8df1ba5c;
+    font-size: 1.4em;
+    padding: 1px;
+}
+
+nav {
+    
+   margin-top: 40px;
+   
+}
+
+#video {
+    background-color: #1A5C38;
+    
+}
+
+#aprender {
+    
+    background-color: #C5EBD6;
+     
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    padding: 10px;
+}
+
+#aprendermais {
+    background-color: rgb(47, 168, 102);
+    margin-top: 10px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    
+    
+}
+
+
+p {
+    text-indent: 30px;
+    text-align: justify;
+    padding: 10px;
+    
+
+   
+}
+
+footer{
+    background-color: #1A5C38;  
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    color: white;
+}
+
+span {
+    display: inline-block;
+    text-align: justify;
+    margin: 15px;
+
+}
+
+
+ul {
+    display: inline-block;
+}
+
+
+
+
+li::before {
+    content: '✔';
+}
+
+.destaque:hover {
+    background-color: #8df1ba5c;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+#video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
