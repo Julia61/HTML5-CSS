@@ -5,6 +5,10 @@
     a {
         background-color: black;
     }
+
+    body {
+        background-color: pink;
+    }
  </style>
 
 
