@@ -1,14 +1,5 @@
 @charset "UTF-8";
 
-/* Todas as demais mídias*/
-
-/*Typical Device Breakpints
-pequenas telas: até 425px
-
-tablet:
-*/
-
-
 @media print{/*impressão*/
     *{
         font-family: 'Courier New', Courier, monospace;
