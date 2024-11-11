@@ -8,6 +8,7 @@
         body {
             margin: 0px;
             padding: 0px;
+            background-color: bisque;
         }
         .wrapper > div{
             background-color: royalblue;
@@ -18,13 +19,17 @@
             background-color: skyblue;
         }
 
+        .wrapper > div:nth-child(2) {
+            align-self: flex-start;
+        }
+
         .wrapper {
             display: grid;
+           
             
-            grid-gap: 10px;
             
             grid-auto-rows: 200px;
-            grid-template-columns:  minmax(200px, 40%) 200px  200px ;
+            grid-template-columns:  repeat(3,1fr);
             
         }
     </style>
