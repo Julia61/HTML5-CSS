@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        body{
+            display: grid;
+            grid-template-rows: auto 1fr auto;
+            grid-template-columns: repeat(5, 1fr);
+            min-height: 100vh;
+            margin: 0px;
+            padding: 0px;
+        }
+       
+        header {
+            background-color: bisque;
+            grid-column: 1 / -1;
+        }
+
+        main {
+            background-color: brown;
+            grid-column: 2 / 5;
+        }
+
+        .oi {
+            grid-column: 5 / 5;
+        }
+
+        article {
+            background-color: aquamarine;
+            grid-column: 1 / 2;
+            grid-row: 2;
+        }
+        footer {
+            grid-row: 3;
+            grid-column: 1 / -1;
+            background-color: cadetblue;
+            height: 100px;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Olá mundo</h1>
+    </header>
+    <main>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum nisi hic voluptas officia optio temporibus porro quaerat, ullam, cum facere excepturi eius fugiat deleniti ad maiores odio. Ipsum, quisquam! Molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda ipsam est veniam molestias cumque odit nesciunt totam debitis, quo labore! Inventore, sit modi maiores repudiandae dicta fugiat vero voluptates non?
+        Provident adipisci est assumenda nostrum exercitationem neque vitae numquam. Similique, quas minima rem in facilis maiores delectus dolorum, nam repellendus officia velit veniam necessitatibus ducimus fuga repellat reiciendis culpa quod.
+        Consectetur placeat vero enim dicta. Praesentium, aspernatur nemo. Laborum sint quia, blanditiis inventore perferendis deserunt earum illum accusantium consequatur veniam ab culpa ipsa eveniet maiores recusandae nisi, quod, quibusdam sunt.</p>
+    </main>
+
+    <article>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, odit libero laudantium corporis mollitia neque omnis magnam saepe quas sequi provident perspiciatis voluptatibus quam ipsam recusandae fugiat et hic quibusdam?</p>
+    </article>
+
+    <article class="oi">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, odit libero laudantium corporis mollitia neque omnis magnam saepe quas sequi provident perspiciatis voluptatibus quam ipsam recusandae fugiat et hic quibusdam?</p>
+    </article>
+   
+    <footer>
+        Criado por Julia
+    </footer>
+
+    
+</body>
+</html>

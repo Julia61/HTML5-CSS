@@ -19,18 +19,28 @@
             background-color: skyblue;
         }
 
-        .wrapper > div:nth-child(2) {
-            align-self: flex-start;
-        }
-
+        
         .wrapper {
             display: grid;
-           
-            
-            
-            grid-auto-rows: 200px;
-            grid-template-columns:  repeat(4,1fr);
-            
+            grid-template-columns:  repeat(5,1fr);
+            grid-template-rows: repeat(3, minmax(200px, auto));
+            gap: 1rem;
+        }
+
+        .wrapper > div:nth-child(1){
+            grid-column: 1 / -1;
+        }
+
+        .wrapper > div:nth-child(2){
+            grid-column: 1;
+        }
+
+        .wrapper > div:nth-child(3){
+            grid-column: 2 / 5;
+        }
+
+        .wrapper > div:nth-child(5){
+            grid-column: 1 / -1;
         }
     </style>
 </head>
@@ -41,12 +51,7 @@
         <div>3</div>
         <div>4</div>
         <div>5</div>
-        <div>6</div>
-        <div>7</div>
-        <div>8</div>
-        <div>8</div>
-        <div>8</div>
-        <div>8</div>
+       
 
     </div>
     
