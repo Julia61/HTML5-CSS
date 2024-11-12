@@ -114,7 +114,9 @@
         * {
             box-sizing: border-box;
         }
+
         body {
+            box-sizing: border-box;
             display: flex;
             flex-flow: column nowrap;
             font-family: "Sour Gummy", serif;
@@ -123,10 +125,13 @@
             margin: 0px;
             padding: 0px;
             height: 100vh;
-            width: 100vw;
+            
+            
+            overflow-x: hidden;
         }
 
         header {
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.342);
             background-color: #5B6C80;
             color: white;
             padding: 5px;
@@ -138,37 +143,170 @@
             width: 100%;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
+            
         }
 
-        #primeiro{
+        section#video > iframe {
+            border-radius: 5px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
             margin: 5px;
+            width: 90%;
+            max-width: 100%;
+        }
+
+        main#primeiro{
+            line-height: 30px;
+            flex: 1;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.466);
+            margin: 20px 10px;
             background-color: #deedff;
             color: black;
             padding: 10px;
+            min-height: 300px; 
+            overflow-y: auto;
             border-radius: 10px;
+            
         }
 
         article {
+            line-height: 30px;
+            flex: 1;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.466);
             border-radius: 10px;
+            min-height: 300px; 
             padding: 10px;
             color: black;
-            margin: 5px;
+            overflow-y: hidden;
+            margin: 20px 10px;
             background-color: #c6d2df;
         }
 
         footer {
-            display: flex;
-            
-            color: white;
-            justify-content: center;
-            align-items: center;
-            background-color: #5B6C80;
+            color: #5B6C80;
+            font-weight: bold;
+            padding: 5px;
+            background-color: #dbe1e8;
         }
 
         
 
-       
+        
+
+        
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+           
+            body{
+                height: 100vh;
+                width: 100vw;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+            }
+
+            
+
+            header {
+                grid-row: 1;
+                grid-column: 1 / -1;
+            }
+
+            section#video {
+                
+                background-color: #507bac;
+                grid-row: 2 / 5;
+                grid-column: 1 / 3;
+            }
+
+            section#imagem {
+                
+                background: url(imagens/neve.jpg);
+                grid-row: 5 / 6;
+                
+                grid-column: 1  / -1;
+                background-size: cover;
+                background-position: center center;
+            }    
+        
+        
+            main#primeiro {
+                margin: 10px;
+                grid-row: 2 / 3;
+                grid-column: 3 / -1;
+            }
+
+            article {
+                margin: 10px;
+                min-height: 300px;
+                line-height: 30px;
+                display: flex;
+                flex: 1;
+                align-items: center;
+
+                grid-row: 3 / 5;
+                grid-column: 3 / -1;
+            }
+
+            footer {
+                grid-column: 1 / -1;
+            }
+
+            
+
+        }
+
+        @media screen and (min-width: 1024px) {
+            body{
+                height: 100vh;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+            }
+            
+            header {
+                grid-column: 1 / -1;
+                grid-row: 1;
+            }
+
+            section#video {
+                
+                grid-column: 1 / 5;
+                grid-row: 2;
+                background-color: #507bac;
+            }
+
+            main#primeiro{
+                grid-row: 3 / 5;
+                grid-column: 1 / 3;
+                min-width: 300px;
+                min-height: 300px;
+                max-width: 1000px;
+                margin: 10px;
+            }
+
+            article {
+                
+                align-items: center;
+                margin: 10px;
+                min-height: 300px;
+                min-width: 300px;
+                max-width: 1000px;
+                grid-row: 3 / 5;
+                grid-column: 3 / 5;
+            }
+
+            section#imagem {
+                grid-row: 2 / 6;
+                grid-column: 5;
+                background: url(imagens/neve.jpg) no-repeat;
+            }
+
+            footer{
+                grid-row: 6;
+                grid-column: 1 / -1;
+            }
+
+
+        }
 
     </style>
 </head>
@@ -179,8 +317,8 @@
     <section id="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/qWZDvc65YSE?si=yHWSnd8Df0zKXYGa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
-    <main>
-        <p id="primeiro">Os bebês focas, também conhecidos como 'pups', são famosos por seus grandes olhos e pelo pelo branco fofo, que os ajuda a se camuflar na neve."
+    <main  id="primeiro">
+        <p>Os bebês focas, também conhecidos como 'pups', são famosos por seus grandes olhos e pelo pelo branco fofo, que os ajuda a se camuflar na neve."
             Curiosidades sobre Filhotes de Foca:
             "Quando nascem, os filhotes de foca têm uma pelagem branca para se misturarem ao gelo e se protegerem dos predadores. Essa pelagem é temporária e logo é trocada por uma camada mais espessa, à medida que eles crescem."
             
@@ -196,12 +334,13 @@
         <p>
             "As mães focas são extremamente protetoras e cuidam dos filhotes intensamente nas primeiras semanas, ensinando-os a nadar e a buscar alimentos."
             Comportamento Brincalhão:
-            "Assim como os filhotes de outros animais, os bebês focas adoram brincar. Essas brincadeiras ajudam a desenvolver habilidades motoras essenciais para a sobrevivência no mar.
+            Assim como os filhotes de outros animais, os bebês focas adoram brincar. Essas brincadeiras ajudam a desenvolver habilidades motoras essenciais para a sobrevivência no mar.
+            
         </p>
     </article>
     
     <footer>
-        <p>feito por julia</p>
+        feito por Julia
     </footer>
     
 </body>
