@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sour Gummy", serif;
+    height: 100vh;
+    width: 100vw;
+    background-color: #596448;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    background-color: #BFBEBA;
+    width: 320px;
+    height: 570px;
+    border-radius: 13px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.466);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+div#imagem {
+    background: url(../imagens/imagem-flores.jpg) no-repeat;
+    background-size: cover;
+    background-position: left center;
+    height: 230px;
+    width: 100%;
+}
+
+div#formulario > h1{
+    text-align: center;
+    font-size: 1.7em;
+    color: #A67D03;
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 0.381);
+}
+
+div#formulario > p{
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+
+div.campo {
+    background-color: #596448;
+    text-align: center;
+    margin: 10px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+}
+
+div.campo > span {
+    color: white;
+    font-size: 1.7em;
+    padding: 5px;
+}
+
+div.campo > input {
+    width: 85%;
+    height: 25px;
+    padding: 5px;
+    border-radius: 7px;
+    border: none;
+    font-size: 1em;
+}
+
+div.campo > label {
+    display: none;
+}
+
+form > input[type="submit"]{
+    
+    display: block;
+    margin: auto;
+    width: calc(100% - 20px);
+    border-radius: 7px;
+    border: none;
+    background-color: #a0ad7b;
+    padding: 9px; 
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+form > input[type="submit"]:hover {
+    background-color: #d3e4a5;
+    color: black;
+}
+
+a {
+    margin-top: 15px;
+    background-color: #a8914b;
+    padding: 9px;
+    margin: 10px;
+    border-radius: 7px;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+
+
+a:hover {
+    background-color: #e0cd94;
+    color: black;
+}

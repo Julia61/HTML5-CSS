@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+    
+    body {
+        background-image: linear-gradient(to top, #908156,#434e31);
+    }
+
+    main {
+        width: 730px;
+        height: 480px;
+    }
+
+    section#login {
+        height: 100vh;
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    div#imagem {
+        background-position: center center;
+        width: 530px;
+        height: 100%;
+    }
+
+    div#formulario > h1{
+        font-size: 2.1em;
+        margin-top: 15px;
+    }
+
+    div#formulario > p {
+        font-size: 1.1em;
+        margin-top: 10px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    div.campo {
+        margin-top: 10px;
+    }
+
+    form > input[type="submit"]{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    
+    
+    div.campo > input {
+        width: 90%;
+    }
+
+    div.campo > input:focus {
+        background-color: rgb(121, 130, 114);
+    }
+ }
